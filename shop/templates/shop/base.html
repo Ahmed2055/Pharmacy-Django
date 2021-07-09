@@ -1,0 +1,63 @@
+{% load i18n %}
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>{% block title %}{% trans "ZAHRAT ALRAWDA PHARMACIES" %}{% endblock %}</title>
+    <link href="{% static "css/base8.css" %}" rel="stylesheet">
+</head>
+<body>
+<div id="header">
+    <a href="/" class="logo">{% trans "ZAHRAT ALRAWDA PHARMACIES" %}</a>
+    {% get_current_language as LANGUAGE_CODE %}
+  {% get_available_languages as LANGUAGES %}
+  {% get_language_info_list for LANGUAGES as languages %}
+  <div class="companylogo"> <a href="/"> <img  src="{% static  "img/companylogonew1.jpg" %} "></a> </div>
+    <div class="search">
+        <form method="GET" action="" class="search" >
+        <input type="text" name="q" placeholder="Search products here" />
+        <input type="Submit" value="Search"/>
+        </form>
+    </div>
+  <div class="languages">
+    <p>{% trans "Language" %}:</p>
+    <ul class="languages">
+      {% for language in languages %}
+        <li>
+          <a href="/{{ language.code }}/"
+          {% if language.code == LANGUAGE_CODE %} class="selected"{% endif %}>
+            {{ language.name_local }}
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+</div>
+
+<div id="subheader">
+    <div class="cart">
+        {% with total_items=cart|length %}
+        {% if total_items > 0 %}
+        Your cart:
+        <a href="{% url "cart:cart_detail" %}">
+        {% blocktrans with total=cart.get_total_price count items=total_items %}
+              {{ items }} item, {{ total }} SAR
+            {% plural %}
+              {{ items }} items, {{ total }} SAR
+            {% endblocktrans %}
+        </a>
+        {% else %}
+        {% trans "Your cart is empty." %}
+        {% endif %}
+        {% endwith %}
+    </div>
+
+</div>
+<div id="content">
+    {% block content %}
+    {% endblock %}
+</div>
+</body>
+</html>
+

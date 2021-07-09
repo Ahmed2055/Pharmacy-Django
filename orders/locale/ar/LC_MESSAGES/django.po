@@ -1,0 +1,76 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-06-22 07:57+0300\n"
+"PO-Revision-Date: 2020-06-09 07:02+0000\n"
+"Last-Translator: b'  <phabosamra2055@gmail.com>'\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
+"&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
+"X-Translated-Using: django-rosetta 0.9.3\n"
+
+#: .\orders\models.py:13
+msgid "first name"
+msgstr "الاسم الاول"
+
+#: .\orders\models.py:14
+msgid "last name"
+msgstr "الاسم الاخير"
+
+#: .\orders\models.py:15
+msgid "e-mail"
+msgstr "العنوان الاليكتروني"
+
+#: .\orders\models.py:16
+msgid "address"
+msgstr "العنوان"
+
+#: .\orders\models.py:17
+msgid "postal code"
+msgstr "الرمز البريدي"
+
+#: .\orders\models.py:18
+msgid "city"
+msgstr "المدينة"
+
+#: .\orders\templates\orders\order\create.html:4
+#: .\orders\templates\orders\order\create.html:7
+msgid "Checkout"
+msgstr "الدفع"
+
+#: .\orders\templates\orders\order\create.html:9
+msgid "Your order"
+msgstr "طلبك"
+
+#: .\orders\templates\orders\order\create.html:19
+#, python-format
+msgid ""
+"\n"
+"            \"%(code)s\" (%(discount)s%% off)\n"
+"      "
+msgstr ""
+"\n"
+"\"%(code)s\" (%(discount)s%% خصم)"
+
+#: .\orders\templates\orders\order\create.html:27
+msgid "Total"
+msgstr "اجمالي الحساب"
+
+#: .\orders\templates\orders\order\create.html:32
+msgid "Place order"
+msgstr "تاكيد الطلب"
+
+#: .\orders\urls.py:9
+msgid "create/"
+msgstr ""
